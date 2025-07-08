@@ -6,12 +6,25 @@
 <meta charset="utf-8">
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, "Microsoft JhengHei", "PingFang TC", sans-serif; /* 增加中文字體，優先顯示微軟正黑體或蘋方體 */
     line-height: 1.6;
     color: #333;
+    margin: 20px; /* 增加整體邊距 */
+    font-size: 0.9em; /* 將基礎字體大小調小，例如 0.9em 或 14px */
   }
-  h1, h3 {
+  h1 {
     color: #0056b3;
+    text-align: center; /* 讓標題居中 */
+    margin-bottom: 30px;
+    font-size: 1.8em; /* 調整 h1 字體大小 */
+  }
+  h3 { /* 將 h2 改為 h3 以符合您提供的原始碼 */
+    color: #0056b3;
+    border-bottom: 1px solid #ddd; /* 增加底部線條 */
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* 調整 h3 字體大小 */
   }
   ul {
     list-style-type: none;
@@ -28,10 +41,15 @@
     text-decoration: underline;
   }
   .url-text {
-    font-size: 0.9em;
+    font-size: 0.8em; /* URL文字也相對調小，基於其父元素 */
     color: #666;
     margin-left: 5px;
-    word-break: break-all; /* 防止長 URL 導致排版問題 */
+    display: inline-block;
+    word-break: break-all;
+    white-space: normal;
+  }
+  .url-protocol, .url-path {
+    display: inline-block;
   }
   .section {
     margin-bottom: 20px;
@@ -40,47 +58,79 @@
     border-radius: 8px;
     background-color: #f9f9f9;
   }
+  .container {
+    display: flex;
+    gap: 20px;
+  }
+  .column {
+    flex: 1;
+  }
 </style>
 </head>
 <body>
 
 <h1>共享優化案</h1>
 
-<div class="section">
-  <h3>保經公司</h3>
-  <ul>
-    <li><a href="https://uat.lia-inb.lawbroker.com.tw/inb-web/" target="_blank">B01_錠嵂保險經紀人</a> <span class="url-text">https://uat.lia-inb.lawbroker.com.tw/inb-web/</span></li>
-    <li><a href="https://uat.lia-inb.unibroker.com.tw/inb-web/" target="_blank">B02_智匯保險經紀人</a> <span class="url-text">https://uat.lia-inb.unibroker.com.tw/inb-web/</span></li>
-    <li><a href="https://uat.lia-inb.goldennet.com.tw/inb-web/" target="_blank">B03_公勝保險經紀人</a> <span class="url-text">https://uat.lia-inb.goldennet.com.tw/inb-web/</span></li>
-    <li><a href="https://uat.lia-inb.leishan.com.tw/inb-web/" target="_blank">B04_磊山保險經紀人</a> <span class="url-text">https://uat.lia-inb.leishan.com.tw/inb-web/</span></li>
-    <li><a href="https://uat.lia-inb.fs-brokerage.com.tw/inb-web/" target="_blank">B05_富士達保險經紀人</a> <span class="url-text">https://uat.lia-inb.fs-brokerage.com.tw/inb-web/</span></li>
-    <li><a href="https://uat.lia-inb.lia-roc.org.tw/inb-web/" target="_blank">LIA_壽險公會</a> <span class="url-text">https://uat.lia-inb.lia-roc.org.tw/inb-web/</span></li>
-  </ul>
-</div>
+<div class="container">
+  <div class="column">
+    <div class="section">
+      <h3>保經公司_經紀人</h3>
+      <ul>
+        <li><a href="https://uat.lia-intb.lawbroker.com.tw/intb-web/" target="_blank">B01_旋律保險經紀人</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-intb.lawbroker.com.tw/intb-web/</span></span></li>
+        <li><a href="https://uat.lia-intb.unibroker.com.tw/intb-web/" target="_blank">B02_智匯保險經紀人</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-intb.unibroker.com.tw/intb-web/</span></span></li>
+        <li><a href="https://uat.lia-intb.goldennet.com.tw/inb-web/" target="_blank">B03_公勝保險經紀人</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-intb.goldennet.com.tw/inb-web/</span></span></li>
+        <li><a href="https://uat.lia-intb.leishan.com.tw/inb-web/" target="_blank">B04_磊山保險經紀人</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-intb.leishan.com.tw/inb-web/</span></span></li>
+        <li><a href="https://uat.lia-intb.fs-brokerage.com.tw/inb-web/" target="_blank">B05_富士達保險經紀人</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-intb.fs-brokerage.com.tw/inb-web/</span></span></li>
+        <li><a href="https://uat.lia-intb.lia-roc.org.tw/inb-web/" target="_blank">LIA_壽險公會</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-intb.lia-roc.org.tw/inb-web/</span></span></li>
+      </ul>
+    </div>
 
-<div class="section">
-  <h3>保險公司_保經</h3>
-  <ul>
-    <li><a href="https://uat.lia-share.pcalife.com.tw/inb-web/" target="_blank">L03_保誠人壽保險股份有限公司_(B)保經平台</a> <span class="url-text">https://uat.lia-share.pcalife.com.tw/inb-web/</span></li>
-    <li><a href="https://uat.lia-share.skl.com.tw/inb-web/" target="_blank">L08_新光人壽保險股份有限公司_(B)保經平台</a> <span class="url-text">https://uat.lia-share.skl.com.tw/inb-web/</span></li>
-    <li><a href="https://uat.lia-share.fglife.com.tw/inb-web/" target="_blank">L16_遠雄人壽保險事業股份有限公司_(B)保經平台</a> <span class="url-text">https://uat.lia-share.fglife.com.tw/inb-web/</span></li>
-    <li><a href="https://uat.lia-share.allianz.com.tw/inb-web/" target="_blank">L18_安聯人壽保險股份有限公司_(B)保經平台</a> <span class="url-text">https://uat.lia-share.allianz.com.tw/inb-web/</span></li>
-    <li><a href="https://uat.lia-share.yuantalife.com.tw/inb-web/" target="_blank">L61_元大人壽保險股份有限公司_(B)保經平台</a> <span class="url-text">https://uat.lia-share.yuantalife.com.tw/inb-web/</span></li>
-    <li><a href="https://uat.lia-share.transglobe.com.tw/inb-web/" target="_blank">L64_全球人壽保險股份有限公司_(B)保經平台</a> <span class="url-text">https://uat.lia-share.transglobe.com.tw/inb-web/</span></li>
-  </ul>
-</div>
+    <div class="section">
+      <h3>保險公司_保經平台</h3>
+      <ul>
+        <li><a href="https://uat.lia-share.pcalife.com.tw/inb-web/" target="_blank">L03_保誠人壽保險股份有限公司_(B)保經平台</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.pcalife.com.tw/inb-web/</span></span></li>
+        <li><a href="https://uat.lia-share.skl.com.tw/inb-web/" target="_blank">L08_新光人壽保險股份有限公司_(B)保經平台</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.skl.com.tw/inb-web/</span></span></li>
+        <li><a href="https://uat.lia-share.fglife.com.tw/inb-web/" target="_blank">L16_遠雄人壽保險事業股份有限公司_(B)保經平台</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.fglife.com.tw/inb-web/</span></span></li>
+        <li><a href="https://uat.lia-share.allianz.com.tw/inb-web/" target="_blank">L18_安聯人壽保險股份有限公司_(B)保經平台</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.allianz.com.tw/inb-web/</span></span></li>
+        <li><a href="https://uat.lia-share.yuantalife.com.tw/inb-web/" target="_blank">L61_元大人壽保險股份有限公司_(B)保經平台</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.yuantalife.com.tw/inb-web/</span></span></li>
+        <li><a href="https://uat.lia-share.transglobe.com.tw/inb-web/" target="_blank">L64_全球人壽保險股份有限公司_(B)保經平台</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.transglobe.com.tw/inb-web/</span></span></li>
+      </ul>
+    </div>
+  </div>
 
-<div class="section">
-  <h3>保險公司_共享</h3>
-  <ul>
-    <li><a href="https://uat.lia-share.pcalife.com.tw/lia-web/" target="_blank">L03_保誠人壽保險股份有限公司_(A)共享平台</a> <span class="url-text">https://uat.lia-share.pcalife.com.tw/lia-web/</span></li>
-    <li><a href="https://uat.lia-share.skl.com.tw/lia-web/" target="_blank">L08_新光人壽保險股份有限公司_(A)共享平台</a> <span class="url-text">https://uat.lia-share.skl.com.tw/lia-web/</span></li>
-    <li><a href="https://uat.lia-share.fglife.com.tw/lia-web/" target="_blank">L16_遠雄人壽保險事業股份有限公司_(A)共享平台</a> <span class="url-text">https://uat.lia-share.fglife.com.tw/lia-web/</span></li>
-    <li><a href="https://uat.lia-share.allianz.com.tw/lia-web/" target="_blank">L18_安聯人壽保險股份有限公司_(A)共享平台</a> <span class="url-text">https://uat.lia-share.allianz.com.tw/lia-web/</span></li>
-    <li><a href="https://uat.lia-share.yuantalife.com.tw/lia-web/" target="_blank">L61_元大人壽保險股份有限公司_(A)共享平台</a> <span class="url-text">https://uat.lia-share.yuantalife.com.tw/lia-web/</span></li>
-    <li><a href="https://uat.lia-share.transglobe.com.tw/lia-web/" target="_blank">L64_全球人壽保險股份有限公司_(A)共享平台</a> <span class="url-text">https://uat.lia-share.transglobe.com.tw/lia-web/</span></li>
-    <li><a href="https://uat.lia-share.lia-roc.org.tw/lia-web/" target="_blank">LIA_壽險公會_(A)共享平台</a> <span class="url-text">https://uat.lia-share.lia-roc.org.tw/lia-web/</span></li>
-  </ul>
+  <div class="column">
+    <div class="section">
+      <h3>保險公司_共享平台</h3>
+      <ul>
+        <li><a href="https://uat.lia-share.twfhclife.com.tw/lia-web/" target="_blank">L01_臺銀人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.twfhclife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.taiwanlife.com.tw/lia-web/" target="_blank">L02_台灣人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.taiwanlife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.pcalife.com.tw/lia-web/" target="_blank">L03_保誠人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.pcalife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.cathaylife.com.tw/lia-web/" target="_blank">L04_國泰人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.cathaylife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.kgilife.com.tw/lia-web/" target="_blank">L05_凱基人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.kgilife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.nanshanlife.com.tw/lia-web/" target="_blank">L06_南山人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.nanshanlife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.skl.com.tw/lia-web/" target="_blank">L08_新光人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.skl.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.mli.com.tw/lia-web/" target="_blank">L11_三商美邦人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.mli.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.fglife.com.tw/lia-web/" target="_blank">L16_遠雄人壽保險事業股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.fglife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.hontai.com.tw/lia-web/" target="_blank">L17_宏泰人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.hontai.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.allianz.com.tw/lia-web/" target="_blank">L18_安聯人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.allianz.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.post.com.tw/lia-web/" target="_blank">L20_中華郵政股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.post.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.firstlife.com.tw/lia-web/" target="_blank">L21_第一金人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.firstlife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.tcblife.com.tw/lia-web/" target="_blank">L22_合作金庫人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.tcblife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.fubonlife.com.tw/lia-web/" target="_blank">L52_富邦人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.fubonlife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.taishinlife.com.tw/lia-web/" target="_blank">L55_台新人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.taishinlife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.chubblife.com.tw/lia-web/" target="_blank">L56_安達國際人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.chubblife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.aia.com.tw/lia-web/" target="_blank">L57_英屬百慕達商友邦人壽保險股份有限公司台灣分公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.aia.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.yuantalife.com.tw/lia-web/" target="_blank">L61_元大人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.yuantalife.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.transglobe.com.tw/lia-web/" target="_blank">L64_全球人壽保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.transglobe.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.cardif.com.tw/lia-web/" target="_blank">L67_法商法國巴黎人壽保險股份有限公司台灣分公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.cardif.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.fubon.com.tw/lia-web/" target="_blank">N05_富邦產物保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.fubon.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.hotains.com.tw/lia-web/" target="_blank">N06_和泰產物保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.hotains.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.taian.com.tw/lia-web/" target="_blank">N07_泰安產物保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.taian.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.cathay-ins.com.tw/lia-web/" target="_blank">N15_國泰世紀產物保險股份有限公司</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.cathay-ins.com.tw/lia-web/</span></span></li>
+        <li><a href="https://uat.lia-share.lia-roc.org.tw/lia-web/" target="_blank">LIA_壽險公會</a> <span class="url-text"><span class="url-protocol">https://</span><span class="url-path">uat.lia-share.lia-roc.org.tw/lia-web/</span></span></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 </body>
